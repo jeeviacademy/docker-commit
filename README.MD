@@ -33,25 +33,39 @@ cd docker-commit
 Create index.html file
 
 ```sh
-cp Vagrantfile .
+cat <<EOF> index.html
+<html>
+<head>
+<title>Welcome to my excellent blog</title></head>
+<body bgcolor=blue>
+<h1>Welcome to my blog</h1>
+<h2>Jeeviacademy</h2>
+</body>
+</html>
+EOF
 ```
-
-Run Vagrant up Command to bring up 3 VM
+View the file
 
 ```sh
-vagrant up
+cat index.html
 ```
-To check the status of the machine
+Run httpd server
 ```sh
-vagrant status
+docker run -d -p 8080:80 --name httpserver httpd
 ```
-Other Vagrant Commands
+Copy index.html into htdocs
 
 ```sh
-vagrant global-status
-vagrant port lb1
-vagrant port web1
+docker cp index.html httpserver:/usr/local/apache2/htdocs
 ```
+Check the running docker process
+
+```sh
+docker ps
+```
+>[root@lb1 docker-commit]# docker ps
+CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+21dd4b6e218b        httpd               "httpd-foreground"   57 seconds ago      Up 56 seconds       0.0.0.0:8080->80/tcp   httpserver
 
 
 ## License
