@@ -63,6 +63,8 @@ Check the running docker process
 ```sh
 docker ps
 ```
+## Docker ps output
+
 >[root@lb1 docker-commit]# docker ps
 >
 >CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
