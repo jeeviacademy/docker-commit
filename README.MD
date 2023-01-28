@@ -123,30 +123,30 @@ curl -vk localhost:8081
 ```
 >
 >[root@lb1 docker-commit]# curl -vk lb1.dev.com:8081
->* About to connect() to lb1.dev.com port 8081 (#0)
->*   Trying 127.0.1.1...
+> About to connect() to lb1.dev.com port 8081 (#0)
+>   Trying 127.0.1.1...
 > Connected to lb1.dev.com (127.0.1.1) port 8081 (#0)
 > GET / HTTP/1.1
 > User-Agent: curl/7.29.0
 > Host: lb1.dev.com:8081
 > Accept: */*
 > 
->< HTTP/1.1 200 OK
->< Date: Sat, 28 Jan 2023 04:59:45 GMT
->< Server: Apache/2.4.55 (Unix)
->< Last-Modified: Sat, 28 Jan 2023 04:51:24 GMT
->< ETag: "a0-5f34bbbe50b00"
->< Accept-Ranges: bytes< Content-Length: 160
->< Content-Type: text/html
->< 
-<html>
-<head>
-<title>Welcome to Excellent Blog</title></head>
-<body bgcolor=blue>
-<h1>Welcom to my Excellent Blog</h1>
-<h2>Deenadayalan M </h2>
-</body>
-</html>
+> HTTP/1.1 200 OK
+> Date: Sat, 28 Jan 2023 04:59:45 GMT
+> Server: Apache/2.4.55 (Unix)
+> Last-Modified: Sat, 28 Jan 2023 04:51:24 GMT
+> ETag: "a0-5f34bbbe50b00"
+> Accept-Ranges: bytes< Content-Length: 160
+> Content-Type: text/html
+> 
+><html>
+><head>
+><title>Welcome to Excellent Blog</title></head>
+><body bgcolor=blue>
+><h1>Welcom to my Excellent Blog</h1>
+><h2>Deenadayalan M </h2>
+></body>
+></html>
 * Connection #0 to host lb1.dev.com left intact
 
 ## License
