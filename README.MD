@@ -71,6 +71,52 @@ docker ps
 >
 >21dd4b6e218b        httpd               "httpd-foreground"   57 seconds ago      Up 56 seconds       0.0.0.0:8080->80/tcp   httpserver
 
+```sh
+docker images
+```
+## Docker images output
+
+>[root@lb1 docker-commit]# docker images
+>
+>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+>
+docker.io/httpd     latest              6e794a483258        9 days ago          145 MB
+>
+docker.io/alpine    latest              042a816809aa        2 weeks ago         7.05 MB
+>
+docker.io/busybox   latest              66ba00ad3de8        3 weeks ago         4.87 MB
+[root@lb1 docker-commit]# 
+
+Commit index.html into running container image
+
+```sh
+docker commit 21dd4b6e218b httpserver:v1
+```
+## Docker ps output
+
+>[root@lb1 docker-commit]# docker ps
+>
+>CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+>
+>21dd4b6e218b        httpd               "httpd-foreground"   57 seconds ago      Up 56 seconds       0.0.0.0:8080->80/tcp   httpserver
+
+Creating a new container from commited images
+```sh
+docker run -d -p 8081:80 --name httpd-v1 httpserver:v1
+```
+## Docker ps output
+
+>[root@lb1 docker-commit]# docker ps
+>
+CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+>
+67b3a315bd4b        httpserver:v1       "httpd-foreground"   4 seconds ago       Up 3 seconds        0.0.0.0:8081->80/tcp   httpd-v1
+>
+21dd4b6e218b        httpd               "httpd-foreground"   4 minutes ago       Up 4 minutes        0.0.0.0:8080->80/tcp   httpserver
+>
+[root@lb1 docker-commit]# 
+
+
 
 ## License
 
