@@ -80,12 +80,12 @@ docker images
 >
 >REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 >
-docker.io/httpd     latest              6e794a483258        9 days ago          145 MB
+>docker.io/httpd     latest              6e794a483258        9 days ago          145 MB
 >
-docker.io/alpine    latest              042a816809aa        2 weeks ago         7.05 MB
+>docker.io/alpine    latest              042a816809aa        2 weeks ago         7.05 MB
 >
-docker.io/busybox   latest              66ba00ad3de8        3 weeks ago         4.87 MB
-[root@lb1 docker-commit]# 
+>docker.io/busybox   latest              66ba00ad3de8        3 weeks ago         4.87 MB
+>[root@lb1 docker-commit]# 
 
 Commit index.html into running container image
 
@@ -108,13 +108,13 @@ docker run -d -p 8081:80 --name httpd-v1 httpserver:v1
 
 >[root@lb1 docker-commit]# docker ps
 >
-CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+>CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
 >
-67b3a315bd4b        httpserver:v1       "httpd-foreground"   4 seconds ago       Up 3 seconds        0.0.0.0:8081->80/tcp   httpd-v1
+>67b3a315bd4b        httpserver:v1       "httpd-foreground"   4 seconds ago       Up 3 seconds        0.0.0.0:8081->80/tcp   httpd-v1
 >
-21dd4b6e218b        httpd               "httpd-foreground"   4 minutes ago       Up 4 minutes        0.0.0.0:8080->80/tcp   httpserver
+>21dd4b6e218b        httpd               "httpd-foreground"   4 minutes ago       Up 4 minutes        0.0.0.0:8080->80/tcp   httpserver
 >
-[root@lb1 docker-commit]# 
+>[root@lb1 docker-commit]# 
 
 
 
