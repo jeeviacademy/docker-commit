@@ -66,6 +66,7 @@ docker ps
 >[root@lb1 docker-commit]# docker ps
 >
 >CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+>
 >21dd4b6e218b        httpd               "httpd-foreground"   57 seconds ago      Up 56 seconds       0.0.0.0:8080->80/tcp   httpserver
 
 
