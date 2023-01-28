@@ -18,7 +18,7 @@ This topic is covered in Docker section in [DevOps in Depth]. In case you are in
 
 ## Features
 
-- Create a Container, run several commands, and then use docker commit to generate a new image
+- Copy customized index.html file, and then use docker commit to generate a new image
 
 Create a Directory
 
